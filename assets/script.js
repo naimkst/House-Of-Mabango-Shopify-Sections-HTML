@@ -77,3 +77,25 @@ closeBtn.addEventListener('click', () => {
   myElement.classList.remove('active');
 });
 
+
+
+// faq
+
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', function () {
+    const accordionItem = this.parentElement;
+    const content = accordionItem.querySelector('.accordion-content');
+    if (accordionItem.classList.contains('active')) {
+      accordionItem.classList.remove('active');
+      content.style.maxHeight = null;
+    } else {
+      document.querySelectorAll('.accordion-item.active').forEach(activeItem => {
+        activeItem.classList.remove('active');
+        activeItem.querySelector('.accordion-content').style.maxHeight = null;
+      });
+      accordionItem.classList.add('active');
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  });
+});
+

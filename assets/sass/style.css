@@ -50,6 +50,7 @@
 .product-area {
   padding-bottom: 110px;
   background: #fbfbfb;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .product-area {
@@ -197,11 +198,6 @@
   border-radius: 50%;
   font-size: 30px;
 }
-@media (max-width: 1200px) {
-  .product-wrap .owl-nav button {
-    left: 43%;
-  }
-}
 @media (max-width: 767px) {
   .product-wrap .owl-nav button {
     display: none;
@@ -292,6 +288,78 @@
 }
 .gallery-area .gallery-grids .gallery-grid .gallery-item:hover .icon {
   transform: scale(1);
+}
+
+.faq-section {
+  background: #fef5d7;
+}
+.faq-section .faq-wrap {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .faq-section .faq-wrap {
+    flex-wrap: wrap;
+  }
+}
+.faq-section .faq-wrap .faq-heading {
+  padding-right: 30px;
+  flex-basis: 30%;
+}
+@media (max-width: 991px) {
+  .faq-section .faq-wrap .faq-heading {
+    flex-basis: 100%;
+  }
+}
+.faq-section .faq-wrap .faq-heading .section-title {
+  text-align: left;
+}
+.faq-section .faq-wrap .faq-items {
+  flex-basis: 70%;
+}
+@media (max-width: 991px) {
+  .faq-section .faq-wrap .faq-items {
+    flex-basis: 100%;
+  }
+}
+.faq-section .faq-wrap .faq-items .accordion-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.faq-section .faq-wrap .faq-items .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+}
+.faq-section .faq-wrap .faq-items .accordion-item.active .accordion-content {
+  max-height: 200px;
+}
+.faq-section .faq-wrap .faq-items .accordion-header {
+  cursor: pointer;
+  padding: 18px 20px;
+  border-radius: 5px !important;
+  border: none;
+  text-align: left;
+  width: 100%;
+  outline: none;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  padding-right: 30px;
+}
+.faq-section .faq-wrap .faq-items .accordion-header:before {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  content: "+";
+  font-size: 25px;
+}
+.faq-section .faq-wrap .faq-items .accordion-item.active .accordion-header:before {
+  content: "-";
 }
 
 /*** newsletter-popup-area ***/
