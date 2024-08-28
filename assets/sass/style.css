@@ -664,4 +664,34 @@
 }
 .footer-section .footer-grids .link-widget ul li + li {
   margin-top: 20px;
+}
+
+.offer-area {
+  position: fixed;
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+.offer-area.cross {
+  left: -150px;
+}
+.offer-area .offer-wrap {
+  padding: 30px 50px 20px 30px;
+  background: #000;
+  transform: rotate(270deg);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.offer-area h4 {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+}
+.offer-area .close {
+  position: absolute;
+  right: 8px;
+  top: 45px;
+  color: #fff;
+  z-index: 11;
 }/*# sourceMappingURL=style.css.map */

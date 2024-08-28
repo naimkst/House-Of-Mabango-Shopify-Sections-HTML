@@ -99,3 +99,7 @@ document.querySelectorAll('.accordion-header').forEach(header => {
   });
 });
 
+// openBtn
+document.querySelector('.close').onclick = function() {
+  document.querySelector('.offer-area').classList.add('cross');
+}

@@ -737,3 +737,39 @@
         }
     }
 }
+
+// offer-area
+
+.offer-area {
+    position: fixed;
+    top: 50%;
+    left: -80px;
+    transform: translateY(-50%);
+    transition: all .3s;
+
+    &.cross {
+        left: -150px; 
+    }
+    
+    .offer-wrap {
+        padding: 30px 50px 20px 30px;
+        background: $black;
+        transform: rotate(270deg);
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    h4 {
+        color: $white;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .close {
+        position: absolute;
+        right: 8px;
+        top: 45px;
+        color: $white;
+        z-index: 11;
+    }
+}
